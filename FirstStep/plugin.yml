@@ -1,0 +1,18 @@
+name: FirstStep
+main: FirstStep\Main
+author: "Jimin"
+version: "0.1-Alpha"
+api:
+- 1.13.0
+- 2.0.0
+
+commands:
+ firststep:
+  permission: firststep.commands
+  default: OP
+  
+permissions:
+ firststep.commands:
+  default: OP
+  
+  
