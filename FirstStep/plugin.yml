@@ -1,6 +1,6 @@
 name: FirstStep
 main: FirstStep\Main
-author: "Jimin"
+author: "sJimin"
 version: "0.1-Alpha"
 api:
 - 1.13.0
