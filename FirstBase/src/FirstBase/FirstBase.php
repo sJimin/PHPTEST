@@ -4,20 +4,24 @@ namespace FirstBase;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\utils\TextFormat;
-use pocketmine\block\Block;
 use pocketmine\event\block\SignChangeEvent;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\utils\TextFormat;
+use pocketmine\event\entity\EntityExplodeEvent;
 
 
-class FirstBase extends PluginBase implements Listener{
+
+class FirstBase extends PluginBase implements Listener{	 	
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getLogger()->info("플러그인 적용완료");
+		$this->getLogger()->info(TextFormat::BLUE."플러그인 적용완료");
 	}
+	
     public function onPlayerjoin(PlayerJoinEvent $event){
-    	$event->setJoinMessage(TextFormat::GOLD.$event->getPlayer()->getName()+"님이 입장하셨습니다.");
+    	$event->setJoinMessage($event->getPlayer()->getName()+"님 반갑습니다");
+    	
+    	
     }
     	
     public function signchange(SignChangeEvent $event){
@@ -27,25 +31,26 @@ class FirstBase extends PluginBase implements Listener{
     	$event->setLine(3,"work!");
     }
     public function onDisable(){
-    	$this->getLogger()->info("플러그인이 종료되었습니다.");
+    	$this->getLogger()->info(TextFormat::Red."플러그인이 종료되었습니다.");
     }
+    public function onBanblock(BlockPlaceEvent $event){
+    	$blocklist=array("46","237","239");
+    	foreach ($blocklist as $Bancode){
+    	if($event->getBlock()->getId()==$Bancode){
+    		$event->setCancelled(true);
+    		$player=$event->getPlayer();
+    		$player->sendMessage(TextFormat::RED."님이 금지된 아이템을 사용하였습니다");
+    	}
+    	
+    }
+    }
+    	
+    
+    public function onExplode(EntityExplodeEvent $event){
+    	$event->setCancelled(true);
+    }  
 }
-
-class Block{
-	public static $Banblock;
-	public function onBanblock(BlockPlaceEvent $event){
-		$this->Banblock=array("LAVA,TNT,GRASS");
-		if($event->getBlock()->getId()==Block::get(Block::$Banblock)){
-			$player=$event->getPlayer();
-			$player->sendMessage(TextFormat::RED.$event->getPlayer()->getName()+"님이 금지된 블록을 사용하셨습니다.");
-			$event->setCancelled(true);
-		}
-	}
-}	
-		
-	
-
-
+    
 
 
 ?>
