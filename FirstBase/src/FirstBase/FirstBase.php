@@ -19,7 +19,8 @@ class FirstBase extends PluginBase implements Listener{
 	}
 	
     public function onPlayerjoin(PlayerJoinEvent $event){
-    	$event->setJoinMessage($event->getPlayer()->getName()+"님 반갑습니다");
+    	$player=$event->getPlayer();
+    	$event->setJoinMessage(TextFormat::DARK_PURPLE.$player->getName()."님 반갑습니다");
     	
     	
     }
@@ -31,15 +32,15 @@ class FirstBase extends PluginBase implements Listener{
     	$event->setLine(3,"work!");
     }
     public function onDisable(){
-    	$this->getLogger()->info(TextFormat::Red."플러그인이 종료되었습니다.");
+    	$this->getLogger()->info(TextFormat::RED."플러그인이 종료되었습니다.");
     }
     public function onBanblock(BlockPlaceEvent $event){
-    	$blocklist=array("46","237","239");
+    	$blocklist=array("46","327","10","11");
     	foreach ($blocklist as $Bancode){
     	if($event->getBlock()->getId()==$Bancode){
     		$event->setCancelled(true);
     		$player=$event->getPlayer();
-    		$player->sendMessage(TextFormat::RED."님이 금지된 아이템을 사용하였습니다");
+    		$player->sendMessage(TextFormat::RED.$player->getName()."님이 금지된 아이템을 사용하였습니다");
     	}
     	
     }
