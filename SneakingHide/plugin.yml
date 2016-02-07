@@ -1,0 +1,6 @@
+name: SneakingHide
+main: SneakingHide\SneakingHide
+author: "sJimin"
+version: " release"
+api:
+- 2.0.0

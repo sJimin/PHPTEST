@@ -15,12 +15,13 @@ use pocketmine\event\entity\EntityExplodeEvent;
 class FirstBase extends PluginBase implements Listener{	 	
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getLogger()->info(TextFormat::BLUE."플러그인 적용완료");
+		$pdFile=$this->getDescription();
+		$this->getLogger()->info(TextFormat::RED.$pdFile->getName()." 버전 ".$pdFile->getVersion()."이(가) 활성화 되었습니다.");
 	}
 	
     public function onPlayerjoin(PlayerJoinEvent $event){
     	$player=$event->getPlayer();
-    	$event->setJoinMessage(TextFormat::DARK_PURPLE.$player->getName()."님 반갑습니다");
+    	$event->setJoinMessage(TextFormat::AQUA.$player->getName()."님 반갑습니다");
     	
     	
     }
@@ -32,7 +33,8 @@ class FirstBase extends PluginBase implements Listener{
     	$event->setLine(3,"work!");
     }
     public function onDisable(){
-    	$this->getLogger()->info(TextFormat::RED."플러그인이 종료되었습니다.");
+    	$pdFile=$this->getDescription();
+		$this->getLogger()->info(TextFormat::BLUE.$pdFile->getName()." 버전 ".$pdFile->getVersion()."이(가) 종료되었습니다.");
     }
     public function onBanblock(BlockPlaceEvent $event){
     	$blocklist=array("46","327","10","11");
@@ -41,6 +43,7 @@ class FirstBase extends PluginBase implements Listener{
     		$event->setCancelled(true);
     		$player=$event->getPlayer();
     		$player->sendMessage(TextFormat::RED.$player->getName()."님이 금지된 아이템을 사용하였습니다");
+    	
     	}
     	
     }
