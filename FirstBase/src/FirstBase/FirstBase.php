@@ -9,6 +9,8 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\entity\EntityExplodeEvent;
+use pocketmine\event\inventory\InventoryOpenEvent;
+
 
 
 
@@ -53,7 +55,19 @@ class FirstBase extends PluginBase implements Listener{
     public function onExplode(EntityExplodeEvent $event){
     	$event->setCancelled(true);
     }  
+
+
+    public function InventoryOpenEvent(InventoryOpenEvent $event){
+    	$player=$event->getPlayer();
+    	if($event->getInventory()->getType()->get(0)){
+    		$event->setCancelled(true);
+    		$player->sendMessage($player->getName()."님이 ".$event->getInventory()->getSize()."와 ".$event->getInventory()->getMaxStackSize()."만큼의 인벤토리 수를 가지며 ".$event->getInventory()->getHolder()."좌표에서 ".$event->getInventory()->getTitle()."을 사용하셨습니다.");
+    	} //getsize 인벤토리 크기?  getMaxStackSize() 인벤토리 수  getHolder() 인벤토리를 연 좌표  getTitle()인벤토리가 플레이어인지 상자인지 등등 구분
+    	}
 }
+    
+	
+
     
 
 
