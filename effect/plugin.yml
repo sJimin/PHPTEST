@@ -1,0 +1,6 @@
+name: effect
+author: "sJimin"
+main: effect\effect
+version: Alpha 1.0
+api:
+- 2.0.0
