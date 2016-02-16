@@ -4,3 +4,10 @@ main: effect\effect
 version: Alpha 1.0
 api:
 - 2.0.0
+- 1.13.0
+  
+permissions:
+ portionsign.command.allow:
+  descript: "Portion Sign permission"
+  default: true
+  

@@ -1,0 +1,16 @@
+#If you want to change Langauge, Go into the effect\src\effect\database\PluginData.php and "67"line kor->eng 
+
+m_version: 1
+
+
+#(EN) ENGLISH
+eng-portionsign: "portionsign"
+eng-default-prefix: "[ SERVER ]"
+eng-portionsign-description: "Just Touch the sign & get the portion effect!"
+eng-portionsign-help: "/portionsign"
+
+#(KO) KOREAN
+kor-portionsign: "포션표지판"
+kor-default-prefix: "[ 서버 ]"
+kor-portionsign-description: "표지판을 터치하고 포션 효과를 얻으세요"
+kor-portionsign-help: "/포션표지판"

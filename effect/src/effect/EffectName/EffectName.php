@@ -61,25 +61,25 @@ class EffectName{
 	public static function init(){
 		self::$effects = new \SplFixedByteArray(256);
 	
-		self::$effects[EffectName::SPEED] = new EffectName(EffectName::SPEED, "Speed", 124, 175, 198);
-		self::$effects[EffectName::SLOWNESS] = new EffectName(EffectName::SLOWNESS, "Slowdown", 90, 108, 129, true);
-		self::$effects[EffectName::SWIFTNESS] = new EffectName(EffectName::SWIFTNESS, ".digSpeed", 217, 192, 67);
-		self::$effects[EffectName::FATIGUE] = new EffectName(EffectName::FATIGUE, "digSlowDown", 74, 66, 23, true);
-		self::$effects[EffectName::STRENGTH] = new EffectName(EffectName::STRENGTH, "damageBoost", 147, 36, 35);
+		self::$effects[EffectName::SPEED] = new EffectName(EffectName::SPEED, "신속", 124, 175, 198);
+		self::$effects[EffectName::SLOWNESS] = new EffectName(EffectName::SLOWNESS, "구속", 90, 108, 129, true);
+		self::$effects[EffectName::SWIFTNESS] = new EffectName(EffectName::SWIFTNESS, "성급함", 217, 192, 67);
+		self::$effects[EffectName::FATIGUE] = new EffectName(EffectName::FATIGUE, "피로", 74, 66, 23, true);
+		self::$effects[EffectName::STRENGTH] = new EffectName(EffectName::STRENGTH, "힘강화", 147, 36, 35);
 		//self::$effects[EffectName::HEALING] = new InstantEffect(Effect::HEALING, "%potion.heal", 248, 36, 35);
 		//self::$effects[EffectName::HARMING] = new InstantEffect(Effect::HARMING, "%potion.harm", 67, 10, 9, true);
-		self::$effects[EffectName::JUMP] = new EffectName(EffectName::JUMP, "jump", 34, 255, 76);
-		self::$Effects[EffectName::NAUSEA] = new EffectName(EffectName::NAUSEA, "confusion", 85, 29, 74, true);
-		self::$effects[EffectName::REGENERATION] = new EffectName(EffectName::REGENERATION, "regeneration", 205, 92, 171);
-		self::$effects[EffectName::DAMAGE_RESISTANCE] = new EffectName(EffectName::DAMAGE_RESISTANCE, "resistance", 153, 69, 58);
-		self::$effects[EffectName::FIRE_RESISTANCE] = new EffectName(EffectName::FIRE_RESISTANCE, "fireResistance", 228, 154, 58);
-		self::$effects[EffectName::WATER_BREATHING] = new EffectName(EffectName::WATER_BREATHING, "waterBreathing", 46, 82, 153);
-		self::$effects[EffectName::INVISIBILITY] = new EffectName(EffectName::INVISIBILITY, "invisibility", 127, 131, 146);
+		self::$effects[EffectName::JUMP] = new EffectName(EffectName::JUMP, "점프강화", 34, 255, 76);
+		self::$effects[EffectName::NAUSEA] = new EffectName(EffectName::NAUSEA, "멀미", 85, 29, 74, true);
+		self::$effects[EffectName::REGENERATION] = new EffectName(EffectName::REGENERATION, "재생", 205, 92, 171);
+		self::$effects[EffectName::DAMAGE_RESISTANCE] = new EffectName(EffectName::DAMAGE_RESISTANCE, "저항", 153, 69, 58);
+		self::$effects[EffectName::FIRE_RESISTANCE] = new EffectName(EffectName::FIRE_RESISTANCE, "화염저항", 228, 154, 58);
+		self::$effects[EffectName::WATER_BREATHING] = new EffectName(EffectName::WATER_BREATHING, "수중호흡", 46, 82, 153);
+		self::$effects[EffectName::INVISIBILITY] = new EffectName(EffectName::INVISIBILITY, "투명화", 127, 131, 146);
 		//Hunger
-		self::$effects[EffectName::WEAKNESS] = new EffectName(EffectName::WEAKNESS, "weakness", 72, 77, 72 , true);
-		self::$effects[EffectName::POISON] = new EffectName(EffectName::POISON, "poison", 78, 147, 49, true);
-		self::$effects[EffectName::WITHER] = new EffectName(EffectName::WITHER, "wither", 53, 42, 39, true);
-		self::$effects[EffectName::HEALTH_BOOST] = new EffectName(EffectName::HEALTH_BOOST, "healthBoost", 248, 125, 35);
+		self::$effects[EffectName::WEAKNESS] = new EffectName(EffectName::WEAKNESS, "나약함", 72, 77, 72 , true);
+		self::$effects[EffectName::POISON] = new EffectName(EffectName::POISON, "독", 78, 147, 49, true);
+		self::$effects[EffectName::WITHER] = new EffectName(EffectName::WITHER, "위더", 53, 42, 39, true);
+		self::$effects[EffectName::HEALTH_BOOST] = new EffectName(EffectName::HEALTH_BOOST, "체력신장", 248, 125, 35);
 		//Absorption
 		//Saturation
 	}
