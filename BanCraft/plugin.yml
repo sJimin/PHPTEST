@@ -1,0 +1,12 @@
+name: BanCraft
+author: "sJimin"
+main: BanCraft\BanCraft
+version: Alpha 1.0
+api:
+- 2.0.0
+- 1.13.0
+
+commands:
+ bancraft:
+  permission: bancraft.command
+  description: Ban CraftRecipe Plugin

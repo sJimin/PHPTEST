@@ -1,6 +1,12 @@
 name: SneakingHide
 main: SneakingHide\SneakingHide
 author: "sJimin"
-version: " Alpha 1.0"
+version: " Alpha 1.1"
 api:
 - 2.0.0
+- 1.13.0
+
+commands:
+ hide:
+  permission: hide.command
+  description: hide function on/off
