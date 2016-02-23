@@ -1,0 +1,16 @@
+name: clearInventory
+main: clearInventory\clearInventory
+author: "sJimin"
+version: "0.1-Alpha"
+api:
+- 1.13.0
+- 2.0.0
+
+commands:
+ clearinv:
+  permission: clearinv.command
+  description: Simple ClearInventory!
+
+  
+
+  

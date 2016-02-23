@@ -10,3 +10,4 @@ commands:
  hide:
   permission: hide.command
   description: hide function on/off
+ 

@@ -50,7 +50,7 @@ class BanCraft extends PluginBase implements Listener{
 					$getItemHand=$sender->getInventory()->getItemInHand();
 					$banItem=$getItemHand->getId().":".$getItemHand->getDamage();
 					array_push($this->configData["CraftBan"],$banItem);
-					$sender->sendMessage(TextFormat::RED.$banItem."가 벤되었습니다");						
+					$sender->sendMessage(TextFormat::RED.$banItem."를 벤하였습니다");						
 					break;			
 				case "reset":
 					$this->configData["CraftBan"]=[];
@@ -60,9 +60,11 @@ class BanCraft extends PluginBase implements Listener{
 					$getItemHand=$sender->getInventory()->getItemInHand();
 					$banItem=$getItemHand->getId().":".$getItemHand->getDamage();
 					unset($this->configData["CraftBan"][array_search($getItemHand,$this->configData["CraftBan"])]);
+					$sender->sendMessage(TextFormat::RED.$banItem."를 초기화 시켰습니다");
 				case "list":
 					foreach ($this->configData["CraftBan"] as $banlist){
 					$sender->getPlayer()->sendMessage(TextFormat::AQUA.$banlist);
+					$sender->sendMessage(TextFormat::RED."금지된 조합목록을 불러옵니다");
 					}
 			}			 
 		}
