@@ -1,0 +1,14 @@
+name: Elevator
+author: "sJimin"
+main: Elevator\Elevator
+version: Alpha 1.0
+api:
+- 2.0.0
+- 1.13.0
+
+
+
+commands:
+ 엘베:
+  permission: elevator.command
+  description: elevator

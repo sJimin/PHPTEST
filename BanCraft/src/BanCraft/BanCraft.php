@@ -74,12 +74,10 @@ class BanCraft extends PluginBase implements Listener{
 	
 	
 	public function craftEvent(CraftItemEvent $event){
-		$player=$event->getPlayer();
 		$ItemId=$event->getRecipe()->getResult()->getId().":".$event->getRecipe()->getResult()->getDamage();
 		if($this->isData($ItemId)){
 			$event->setCancelled(true);
-			$event->getPlayer()->sendMessage(TextFormat::RED.$ItemId."조합 금지 블록을 사용하였습니다");
-			$event->getPlayer()->kick("담번엔 금지된 아이템을 조합하지 마세요");		
+			$event->getPlayer()->sendMessage(TextFormat::RED.$ItemId."조합 금지 블록을 사용하였습니다");					
 		}
 	}
 		

@@ -103,7 +103,10 @@ class SneakingHide extends PluginBase implements Listener{
 				
 			}
 		}
+		$this->config->save();
+		$this->config->setAll($this->configData);
 	}
+	
 }
 
 
