@@ -1,0 +1,6 @@
+name: InfoBlock
+author: "sJimin"
+main: InfoBlock\InfoBlock
+version: Alpha 1.0
+api:
+- 2.0.0
