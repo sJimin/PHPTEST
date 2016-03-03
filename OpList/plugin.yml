@@ -1,0 +1,14 @@
+name: OpList
+main: OpList\OpList
+author: "sJimin"
+version: "0.1-Alpha"
+api:
+- 1.13.0
+- 2.0.0
+
+commands:
+ oplist:
+  permission: oplist.command
+  description: Infomation of Oplist
+  
+  
