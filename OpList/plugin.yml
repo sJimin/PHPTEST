@@ -10,5 +10,5 @@ commands:
  oplist:
   permission: oplist.command
   description: Infomation of Oplist
-  
+  defaut : true
   

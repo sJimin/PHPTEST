@@ -1,0 +1,14 @@
+name: Calculator
+author: "sJimin"
+main: Calculator\Calculator
+version: Alpha 1.0
+api:
+- 2.0.0
+
+
+
+commands:
+ m:
+  permission: m.command
+  description: Math calculator
+  
